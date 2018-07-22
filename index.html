@@ -8,23 +8,36 @@
         <title>Cadastro</title>
     </head>
     <body>
-            <header>
-                <nav class="topnav">
-                    <div class="topnav-logo"><h1>LOGO</h1></div>
-                    <div class="topnav-button">
-                        <span class="menu-icon"><i class="fas fa-bars"></i></span>
+        <header>
+            <nav class="topnav">
+                <div class="topnav-logo"><h1>LOGO</h1></div>
+                <div class="topnav-button">
+                    <div class="menu-dropdown-toggle"><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="topnav-user">
+                    <div class="notification">
+                        <div class="dot">23</div>
+                        <div class="notification-icon"><i class="far fa-bell"></i></div>
                     </div>
-                    <div class="topnav-user">
-                        <div class="notification">
-                            <div class="dot">23</div>
-                            <span class="notification-icon"><i class="far fa-bell"></i></span>
-                        </div>
-                        <span class="user-icon"><i class="fas fa-user"></i></span>
+                    <div class="user-dropdown-toggle">
+                        <i class="fa fa-user" style="margin-right: 10px;"></i>
                         <span id="user-name">Recursos Humanos</span>
-                        <span class="menu-user-icon"><i class="fas fa-sort-down"></i></span>
                     </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
+        <aside id="menu" class="menu-hidden">
+            <ul class="menu-list">
+                <a><li class="menu-item">Painel de Controle</li></a>
+                <a><li class="menu-item">Movimentação de Pessoal</li></a>
+                <a><li class="menu-item">Relatórios</li></a>
+            </ul>
+        </aside>
+        <aside id="user-menu" class="user-menu-hidden">
+            <ul class="user-menu-list">
+                <a><li class="user-menu-item">Sair</li></a>
+            </ul>
+        </aside>
         <div class="main-content">
             <h1>Nova Movimentação de Pessoal</h1>
             <form>
@@ -230,6 +243,8 @@
                     </div>
             </form>
         </div>
-    
     </body>
+    <footer></footer>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/index.js"></script>
 </html>

@@ -12,6 +12,7 @@ body{
     justify-content: flex-start;
     padding: 0;
     margin: 0;
+    color: #ffffff;
     background-color: #003a59;
     box-shadow: 0px 2px 11px 0px rgba(0,0,0,.3);
     position: fixed;
@@ -28,6 +29,7 @@ body{
 }
 
 .topnav-logo h1 {
+    color: #000000;
     align-self: center;
     font-size: 2rem;
     font-style: italic;
@@ -52,28 +54,23 @@ body{
 
 /* Topnav button */
 
-.topnav-button .menu-icon{
-    color: #ffffff;
+.topnav-button .menu-dropdown-toggle{
     align-self: center;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /* Topnav user*/
-.topnav-user span {
-    color: #ffffff;
+.topnav-user{
     align-self: center;
     font-weight: 100;
     margin-right: 15px;
 }
 
-.notification {
+.notification{
     align-self: center;
     margin-right: 30px;
     position: relative;
-}
-
-.notification-icon{
-    color: #ffffff;
 }
 
 .dot{
@@ -91,9 +88,81 @@ body{
     left: -7px;
 }
 
+.user-dropdown-toggle{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.user-dropdown-toggle::after{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: .255rem;
+    content: "";
+    border-top: .3rem solid;
+    border-right: .3rem solid transparent;
+    border-bottom: 0;
+    border-left: .3rem solid transparent;
+}
+
+/* Menu */
+.menu{
+    position: fixed;
+    background-color: #4c5c66;
+    box-shadow: 3px 2px 11px 0px rgba(0,0,0,.3);
+    top: 50px;
+    width: 17%;
+    height: 80%;
+}
+
+.menu-hidden{
+    display: none;
+}
+
+.menu-list{
+    padding-left: 0;
+    color: #ffffff;
+}
+
+.menu-item{
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #333333;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*User Menu*/
+.user-menu{
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 3px 2px 11px 0px rgba(0,0,0,.3);
+    right: 10;
+    top: 50;
+    width: 10%;
+}
+
+.user-menu-hidden{
+    display: none;
+}
+
+.user-menu-list{
+    margin: 0;
+    padding-left: 0;
+    color: #000000;
+}
+
+.user-menu-item{
+    list-style: none;
+    padding: 15px 10px;
+    font-size: 0.85rem;
+}
+
 /* Content */
 .main-content {
-    margin: 60px 40px 0px 40px;
+    margin: 83px auto 0 auto;
+    width: 90%;
 }
 
 h1 {
@@ -138,7 +207,9 @@ h1 {
 }
 
 .box-info .section{
-    font-size: 0.65rem;
+    font-size: .65rem;
+    text-transform: uppercase;
+    color: #4c5c66;
 }
 
 .box-info .sub-section {
@@ -336,8 +407,17 @@ tbody td {
         width: 10%;
     }
 
+    
     #user-name{
         display: none;
+    }
+
+    .menu{
+        width: 90%;
+    }
+
+    .user-menu{
+        width: 40%;
     }
 
     .main-content {
