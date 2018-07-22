@@ -250,6 +250,10 @@ input[type="date"], input[type="datetime"]{
     background: #fff url(../images/calendar.png) 98% no-repeat;  
 }
 
+input[type="date"]:disabled, input[type="datetime"]:disabled{
+    background-color: #f5f5f5;
+}
+
 input[type="checkbox"]{
     -webkit-appearance: none;
     width: 20px;
