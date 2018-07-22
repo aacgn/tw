@@ -4,8 +4,8 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/* Navbar */
-.navbar{
+/* topnav */
+.topnav{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -13,18 +13,32 @@ body{
     padding: 0;
     margin: 0;
     background-color: #003a59;
-    box-shadow: 0px 5px 5px rgba(148, 148, 148, 0.5);
+    box-shadow: 0px 2px 11px 0px rgba(0,0,0,.3)
 }
 
-.navbar-left{
+.topnav-logo{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 15%;
+    background-color: #ffffff;
+}
+
+.topnav-logo h1 {
+    align-self: center;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.topnav-button {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    width: 50%;
+    width: 35%;
 }
 
-.navbar-right{
+.topnav-user{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -33,40 +47,33 @@ body{
     width: 50%;
 }
 
-/* Left Navbar */
-.navbar-left > .brand {
-    height: 50px;
-    width: 200px;
-    padding-top: 8px;
-    text-align: center;
-    background-color: #ffffff;
-}
+/* Topnav button */
 
-.navbar-left > .brand > span {
-    font-size: 2rem;
-    font-style: italic;
-}
-
-.navbar-left > .menu-icon{
+.topnav-button .menu-icon{
     color: #ffffff;
     align-self: center;
     margin-left: 10px;
 }
 
-/* Right Navbar */
-.navbar-right > span {
+/* Topnav user*/
+.topnav-user span {
     color: #ffffff;
     align-self: center;
     font-weight: 100;
+    margin-right: 15px;
 }
 
-.navbar-right > .notification {
+.notification {
     align-self: center;
-    margin-right: 20px;
+    margin-right: 30px;
     position: relative;
 }
 
-.notification > .notification-dot{
+.notification-icon{
+    color: #ffffff;
+}
+
+.dot{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,74 +88,45 @@ body{
     left: -7px;
 }
 
-.notification > .notification-icon{
-    color: #ffffff;
-}
-
-.navbar-right > .user-icon, .navbar-right > .user-menu-icon{
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
 /* Content */
-body > .content {
+.main-content {
     margin: 20px 40px 0px 40px;
 }
 
-.content > .title {
+h1 {
     font-weight: bold;
+    font-size: 1em;
 }
-
-.content > .content-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-.content > .content-button > .button-left {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}
-
-.content > .content-button > .button-right {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-}
-
-.content > .content-button button{
-    font-weight: bold;
-    font-size: 0.75rem;
-    color: #003a59;
-    border: 1px solid #003a59;
-    border-radius: 2px;
-    background: none;
-    padding: 10px;
-}
-
 
 /* Box */
 
-.content > .box {
+.box {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin-top: 10px;
     background-color: #eff3f6;
+    width: 100%;
 }
 
-/* Box Left*/
-.box > .box-left {
+.box-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 70px 0px;
+}
+
+.box-button button{
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #fff;
+    border: 1px solid #003a59;
+    color: #003a59;
+}
+
+/* Box Info*/
+.box-info {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -156,12 +134,11 @@ body > .content {
     padding: 55px 0px 0px 30px;
 }
 
-.box-left > .section {
+.box-info .section{
     font-size: 0.65rem;
 }
 
-
-.box-left > .sub-section {
+.box-info .sub-section {
     color: #4c5c66;
     font-size: .9rem;
     font-weight: 600;
@@ -170,21 +147,21 @@ body > .content {
     padding-left: 9px;
 }
 
-.box-left > .description {
+.box-info .description {
     color: #4c5c66;
     font-size: .75rem;
     font-weight: 600;
     margin-top: 20px;
 }
 
-/* Box Right*/
+/* Box Input*/
 
-.box > .box-right {
+.box-input {
     width: 60%;
-    padding: 20px 0px 0px 20px;
+    padding: 20px;
 }
 
-.box-right > .section {
+.box-input .section {
     color: #737373;
     font-weight: bold;
     font-size: 0.8rem;
@@ -192,17 +169,45 @@ body > .content {
     border-bottom: 1px solid #d9dadb;
 }
 
-/* Box Right Form*/
+.box-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-.box-right > form {
-    margin-top: 30px;
+.box-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.box-col-md-12 {
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.box-col-md-6{
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 49%;
+    max-width: 49%;
+}
+/*Form*/
+
+form {
     padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.box-right > form label {
+label {
     color: #9f9a9f;
     font-size: 0.65rem;
     margin-top: 15px;
@@ -210,7 +215,7 @@ body > .content {
     width: 100%;
 }
 
-.box-right > form .required::after {
+.required::after {
     content: '*';
     display: inline-block;
     color: #f30d32;
@@ -219,25 +224,33 @@ body > .content {
     margin-left: 3px;
 }
 
-.box-right > form select, .box-right > form  input, .box-right > form textarea{
+select, input, textarea{
+    -webkit-appearance: none;
     font-size: 12px;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid #cccccc;
+    max-width: 100%;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,.14);
 }
 
-.box-right > form input[type="date"], .box-right > form input[type="datetime"]{
-    text-transform: uppercase;
+select {
+    background: #fff url(../images/select-button.png) 98% no-repeat;
 }
 
-.box-right > form #salary{
+input[type="number"]{
     text-align: right;
 }
 
-.box-right > form input[type="checkbox"]{
+input[type="date"], input[type="datetime"]{
+    text-transform: uppercase;
+    background: #fff url(../images/calendar.png) 98% no-repeat;  
+}
+
+input[type="checkbox"]{
     -webkit-appearance: none;
-    width: 15px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #7d7d7d;
     border-top: 2px solid #7d7d7d;
     border-right: 2px solid #f6f6f6;
@@ -245,28 +258,25 @@ body > .content {
     background-color: #fff;
 }
 
-/* Box Right Button*/
-
-.box-right > form button{
+form button{
     color: #ffffff;
     background-color: #6f985c;
-    margin-left: 20px;
     padding: 10px 25px 10px 25px;
     border: none;
     border-radius: 3px;
     font-size: 0.65rem;
-
+    max-width: 150px;
 }
 
-/* Box Right Table */
+/* Table */
 
-.box-right > form table {
+table {
     width: 100%;
     margin-top: 20px;
     border: 1px solid #cccccc;
 }
 
-.box-right > form table > thead{
+thead{
     border: 1px solid #eeeeee;
     font-size: 0.75rem;
     padding: 10px;
@@ -274,31 +284,24 @@ body > .content {
     background-color: #ffffff;
 }
 
-.box-right > form table > thead th {
+thead th {
     text-transform: uppercase;
     padding: 10px;
 }
 
-.box-right > form table > thead th:nth-child(1){
+thead th:nth-child(1){
     width: 87px;
 }
 
-.box-right > form table > tbody {
+tbody {
     border: 1px solid #eeeeee;
     font-size: 0.9rem;
     background-color: #fafafa;
     padding: 10px;  
 }
 
-.box-right > form table > tbody td {
+tbody td {
     padding: 10px;
-}
-
-.box-right > form .full-size{
-    width: 100%;
-}
-.box-right > form .half-size{
-    width: 50%;
 }
 
 
@@ -306,44 +309,52 @@ body > .content {
 
 @media only screen and (max-width: 600px) {
 
-    .navbar-left > .brand {
-        width: 150px;
+    .topnav-logo {
+        width: 40%;
     }
 
-    .navbar-right > #user-name{
+    .topnav-button {
+        width: 10%;
+    }
+
+    #user-name{
         display: none;
     }
 
-    body > .content {
+    .content {
         margin: 25px 10px 10px 10px;
     }
 
-    .content > .title {
+    .main-content {
+        margin: 10px 20px 0px 10px;
+    }
+
+    .main-content > h1 {
         width: 50%;
         word-wrap: break-word;
     }
 
-    .content > .content-button button{
-        font-size: 0.55rem;
-    }
-
-    .content > .box {
+    .box {
         flex-direction: column;
     }
 
-    .box > .box-left {
+    .box > .box-info {
         width: 100%;
         padding: 10px;
     }
 
-    .box > .box-right {
+    .box > .box-input {
         width: 100%;
         margin-top: 30px;
         padding: 10px;
     }
 
-    .box-right > form button{
+    .box-input form button{
         font-size: 0.55rem;
+    }
+
+    .box-button button {
+        width: 100px;
     }
 
 }
