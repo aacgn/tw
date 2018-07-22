@@ -251,7 +251,7 @@ input[type="date"], input[type="datetime"]{
 }
 
 input[type="date"]:disabled, input[type="datetime"]:disabled{
-    background-color: #f5f5f5;
+    background: #f5f5f5;
 }
 
 input[type="checkbox"]{
