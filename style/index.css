@@ -93,7 +93,7 @@ body{
 
 /* Content */
 .main-content {
-    margin: 20px 40px 0px 40px;
+    margin: 60px 40px 0px 40px;
 }
 
 h1 {
@@ -336,12 +336,8 @@ tbody td {
         display: none;
     }
 
-    .content {
-        margin: 25px 10px 10px 10px;
-    }
-
     .main-content {
-        margin: 10px 20px 0px 10px;
+        margin: 60px 20px 0px 10px;
     }
 
     .main-content > h1 {
