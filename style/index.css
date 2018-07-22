@@ -13,7 +13,10 @@ body{
     padding: 0;
     margin: 0;
     background-color: #003a59;
-    box-shadow: 0px 2px 11px 0px rgba(0,0,0,.3)
+    box-shadow: 0px 2px 11px 0px rgba(0,0,0,.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .topnav-logo{
@@ -256,6 +259,18 @@ input[type="checkbox"]{
     border-right: 2px solid #f6f6f6;
     border-bottom: 2px solid #f6f6f6;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="checkbox"]:checked::after {
+    align-self: center;
+    content: '';
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
 form button{
