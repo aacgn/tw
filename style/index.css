@@ -113,7 +113,7 @@ body{
     box-shadow: 3px 2px 11px 0px rgba(0,0,0,.3);
     top: 50px;
     width: 17%;
-    height: 80%;
+    height: 100%;
 }
 
 .menu-hidden{
@@ -398,7 +398,6 @@ tbody td {
 /*Responsive*/
 
 @media only screen and (max-width: 600px) {
-
     .topnav-logo {
         width: 40%;
     }
@@ -406,7 +405,6 @@ tbody td {
     .topnav-button {
         width: 10%;
     }
-
     
     #user-name{
         display: none;
@@ -420,10 +418,6 @@ tbody td {
         width: 40%;
     }
 
-    .main-content {
-        margin: 60px 20px 0px 10px;
-    }
-
     .main-content > h1 {
         width: 50%;
         word-wrap: break-word;
@@ -433,23 +427,26 @@ tbody td {
         flex-direction: column;
     }
 
-    .box > .box-info {
+    .box-info {
         width: 100%;
         padding: 10px;
     }
 
-    .box > .box-input {
+    .box-input {
         width: 100%;
         margin-top: 30px;
         padding: 10px;
     }
 
-    .box-input form button{
+    .box-button button{
         font-size: 0.55rem;
+        width: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 49%;
+        max-width: 49%;
     }
 
-    .box-button button {
-        width: 100px;
-    }
+
 
 }
