@@ -177,9 +177,9 @@ h1 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    margin-top: 10px;
     background-color: #eff3f6;
     width: 100%;
+    margin-top: 20px;
 }
 
 .box-button {
